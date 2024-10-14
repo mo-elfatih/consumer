@@ -4,8 +4,6 @@ Get Employee by ID
 **URL: /api/employees/{id}**
 Method: GET
 Description: Retrieves an employee by their unique ID.
-Example Call:
-bash
 Copy code
 GET /api/employees/1
 Response: Returns a JSON representation of the employee.
@@ -26,8 +24,6 @@ Create New Employee
 Method: POST
 Description: Creates a new employee.
 Request Body: A JSON representation of the employee to create.
-Example Call:
-json
 Copy code
 POST /api/employees
 Content-Type: application/json
@@ -42,9 +38,9 @@ Content-Type: application/json
         "name": "IT"
     }
 }**
+
 Response: Returns the created employee's JSON representation.
 Summary of URL Calls
-Here’s a summary table you can use for your GitHub documentation:
 
 HTTP Method	URL	Description
 GET	/api/employees/{id}	Get employee by ID
