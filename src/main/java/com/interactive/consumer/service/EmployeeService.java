@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class EmployeeService {
@@ -30,6 +31,12 @@ public class EmployeeService {
     // issue if the JSON matches
     // return List.of(employees);
     // }
+
+    public Optional<Employee> getEmployeeById(Long id) {
+        String url = String.format(BASE_URL+"/%d", id);
+        ResponseEntity<Employee> responseEntity = restTemplate.getForEntity(url, Employee.class);
+        return Optional.of(responseEntity.getBody());
+    }
 
     public PageResponse<Employee> getAllEmployees(int page, int size) {
         String url = String.format("%s?page=%d&size=%d", BASE_URL, page, size);

@@ -1,14 +1,34 @@
 package com.interactive.consumer.model;
 
 import java.util.List;
-import lombok.*;
 
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
 public class Department {
-
-    private Long id;
+    private int id;
     private String name;
-    private List<Employee> employees;
+    private List<Integer> employees;
+
+    // Getters and Setters
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public List<Integer> getEmployees() {
+        return employees;
+    }
+
+    public void setEmployees(List<Integer> employees) {
+        this.employees = employees;
+    }
 }
